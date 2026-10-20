@@ -1,0 +1,14 @@
+# зависимости
+node_modules/
+
+# личные настройки и данные (в репозитории — только *.example)
+config.json
+persona.local.md
+bot_account.txt
+
+# журналы и рабочие файлы бота
+chat.log
+dialog.jsonl
+commands.txt
+out.log
+claude_sandbox/

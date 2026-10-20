@@ -1,0 +1,16 @@
+{
+  "host": "127.0.0.1",
+  "port": 19132,
+  "username": "ClaudeBot",
+  "version": "1.19.50",
+  "followPort": true,
+  "raknetBackend": "raknet-native",
+  "claude": {
+    "trigger": "@claude",
+    "owners": ["<твой ник в чате>"],
+    "model": "haiku",
+    "confirmWord": "@ok",
+    "cancelWord": "@no",
+    "maxFillVolume": 4096
+  }
+}
