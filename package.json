@@ -1,0 +1,13 @@
+{
+  "name": "claudebot-bedrock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Бот-помощник с Claude для мира Minecraft Bedrock 1.19.51",
+  "main": "bot.js",
+  "license": "MIT",
+  "author": "GoldenFrog",
+  "scripts": { "start": "node bot.js", "ping": "node ping.js" },
+  "dependencies": {
+    "bedrock-protocol": "3.59.0"
+  }
+}
