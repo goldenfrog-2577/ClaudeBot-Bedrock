@@ -39,7 +39,7 @@
 Пишешь в чат `@claude <вопрос>`, бот запускает Claude Code в режиме без интерфейса и отправляет ответ в чат.
 
 * **Без инструментов**: Claude запускается с `--tools ""` в пустой папке `claude_sandbox`. Он не видит ни файлов компьютера, ни мира, только текст.
-* **Личность и знание карты** берутся из [persona.md](./persona.md). Личное (кто владелец, его ник) лежит в `persona.local.md`, его в репозитории нет, пример — [persona.local.example.md](./persona.local.example.md). Оба файла перечитываются на каждый вопрос, менять их можно без перезапуска.
+* **Личность и знание карты** берутся из [persona.md](./claudebot_framework/persona.md). Личное (кто владелец, его ник) лежит в `persona.local.md`, его в репозитории нет, пример — [persona.local.example.md](./claudebot_framework/persona.local.example.md). Оба файла перечитываются на каждый вопрос, менять их можно без перезапуска.
 * **Контекст**: последние 20 строк чата и память разговора — последние 12 пар «вопрос — ответ» из `dialog.jsonl`.
 * **Модель** по умолчанию Haiku: быстрее и экономнее по лимиту. Меняется в `config.json`.
 * **Звать может только владелец**: список ников в `claude.owners`.
@@ -73,7 +73,7 @@ Steve:     @ok
    ```bat
    git clone https://github.com/goldenfrog-2577/ClaudeBot-Bedrock.git
    ```
-2. Запустите `install.bat`: он установит зависимости, журнал установки будет в `out.log`.
+2. Все файлы бота лежат в папке [`claudebot_framework`](./claudebot_framework); дальше всё запускается оттуда. Запустите `install.bat`: он установит зависимости, журнал установки будет в `out.log`.
 3. Для ответов в чате установите Claude Code и один раз войдите в аккаунт:
    ```bat
    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
@@ -93,6 +93,8 @@ Steve:     @ok
 * `Claude не ответил` — подробности в `chat.log`, в строке `ERROR claude`. Чаще всего это значит, что вы не вошли в Claude Code.
 
 ### 📁 Файлы
+
+В корне репозитория — только README, лицензия и `.gitignore`. Сам бот — в папке [`claudebot_framework`](./claudebot_framework):
 
 | Файл | Что это |
 |---|---|
